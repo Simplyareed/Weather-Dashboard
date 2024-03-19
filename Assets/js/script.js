@@ -32,6 +32,7 @@ function initPage() {
 
             nameEl.innerHTML = response.data.name + " (" + month + "/" + day + "/" + year + ") ";
             let weatherPic = response.data.weather[0].icon;
+            console.log("https://openweathermap.org/img/wn/" + weatherPic + "@2x.png");
 
             currentPicEl.setAttribute("src","https://openweathermap.org/img/wn/" + weatherPic + "@2x.png");
             currentPicEl.setAttribute("alt",response.data.weather[0].description);
