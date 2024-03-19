@@ -29,13 +29,16 @@ function initPage() {
             const day = currentDate.getDate();
             const month = currentDate.getMonth() + 1;
             const year = currentDate.getFullYear();
+
             nameEl.innerHTML = response.data.name + " (" + month + "/" + day + "/" + year + ") ";
             let weatherPic = response.data.weather[0].icon;
+
             currentPicEl.setAttribute("src","https://openweathermap.org/img/wn/" + weatherPic + "@2x.png");
             currentPicEl.setAttribute("alt",response.data.weather[0].description);
             currentTempEl.innerHTML = "Temperature: " + k2f(response.data.main.temp) + " &#176F";
             currentHumidityEl.innerHTML = "Humidity: " + response.data.main.humidity + "%";
             currentWindEl.innerHTML = "Wind Speed: " + response.data.wind.speed + " MPH";
+
         let lat = response.data.coord.lat;
         let lon = response.data.coord.lon;
         let UVQueryURL = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + APIKey + "&cnt=1";
@@ -102,7 +105,7 @@ function initPage() {
         historyEl.innerHTML = "";
         for (let i=0; i<searchHistory.length; i++) {
             const historyItem = document.createElement("input");
-            // <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com"></input>
+            
             historyItem.setAttribute("type","text");
             historyItem.setAttribute("readonly",true);
             historyItem.setAttribute("class", "form-control d-block bg-white");
@@ -120,8 +123,8 @@ function initPage() {
     }
 
 
-//  Save user's search requests and display them underneath search form
-//  When page loads, automatically generate current conditions and 5-day forecast for the last city the user searched for
+//  Save user's search requests and display  under search form
+//  When page loads automatically generate current conditions and 5-day forecast for the last city the user searched for
 
 }
 initPage();

@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="../Assets/css/style.css">
     <title>Weather Dashboard</title>
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark">
         <span class="navbar-brand mb-0 h1 w-100 text-center">Weather Dashboard</span>
     </nav>
+    <!-- container will have search for city with input, followed by search button-->
     <div class="container">
         <div class="row">
             <div class="col-4 bg-light">
@@ -25,6 +26,7 @@
                         </button>
                     </div>
                 </div>
+                <!-- clear history button -->
                 <button class="btn btn-primary mb-3" type="button" id="clear-history">Clear history</button>
                 <form id="history"></form>
             </div>
@@ -37,6 +39,7 @@
                                 <img id="current-pic" src="placeholder" alt="">
                             </div>
                         </div>
+                        <!-- row's will contain temp, humidity, windspeed and UV index-->
                         <div class="row">
                             <div class="col-12">
                                 <p id="temperature"></p>
@@ -64,6 +67,7 @@
                         <h3>5-Day Forecast</h3>
                     </div>
                 </div>
+                <!-- div class will be for 5 day forcast-->
                 <div class="row">
                     <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
                     <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
@@ -77,6 +81,6 @@
 
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="../Assets/js/script.js"></script>
 </body>
 </html>
