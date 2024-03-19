@@ -33,12 +33,14 @@ function initPage() {
             nameEl.innerHTML = response.data.name + " (" + month + "/" + day + "/" + year + ") ";
             let weatherPic = response.data.weather[0].icon;
             console.log("https://openweathermap.org/img/wn/" + weatherPic + "@2x.png");
+            // console log due to receiving 50n error, seeing where troubleshooting issue is pertaining
 
             currentPicEl.setAttribute("src","https://openweathermap.org/img/wn/" + weatherPic + "@2x.png");
             currentPicEl.setAttribute("alt",response.data.weather[0].description);
             currentTempEl.innerHTML = "Temperature: " + k2f(response.data.main.temp) + " &#176F";
             currentHumidityEl.innerHTML = "Humidity: " + response.data.main.humidity + "%";
             currentWindEl.innerHTML = "Wind Speed: " + response.data.wind.speed + " MPH";
+            //sets the data
 
         let lat = response.data.coord.lat;
         let lon = response.data.coord.lon;
